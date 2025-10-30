@@ -196,11 +196,10 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
+  padding: 3rem 0; /* smaller, balanced spacing */
   margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
+  min-height: 100vh; /* full-screen */
 }
 
 .section-container {
@@ -239,6 +238,7 @@ section {
 }
 
 .section__text__p1 {
+  padding-top: 6rem;
   text-align: center;
 }
 
@@ -288,12 +288,35 @@ section {
 
 /* Parallax Section */
 .parallax-section {
-  height: 40vh;
+  min-height: 14vh; /* smaller divider for tighter gaps */
   margin: 0;
-  background-image: url('./assets/b3.jpg');
+  padding: 0;
+  background-image: url('./assets/b4.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
+  will-change: background-position;
+  position: relative;
+}
+.parallax-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.06), rgba(0,0,0,0.06));
+}
+
+/* Disable fixed attachment on mobile/iOS for stability */
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
 }
 
 /* Video Section */
@@ -402,6 +425,28 @@ svg.icon {
 .btn-container {
   gap: 1rem;
 }
+
+/* See more button placement */
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 2.5rem; /* add space above and before section arrow */
+}
+
+.see-more-btn {
+  width: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Improve spacing inside small service/about cards */
+.details-container p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Reduce crowding between hero socials and buttons */
+#socials-container { margin-top: 1.25rem; }
 
 /* ABOUT SECTION */
 
