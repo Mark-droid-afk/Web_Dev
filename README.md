@@ -34,8 +34,8 @@ python -m http.server 5500
 
 ## Credits
 - Fonts: Poppins by Google Fonts
-- Icons/graphics: Provided in `assets/` folder
-- Images: Local assets within `assets/`
+- Icons/graphics: Provided in `assets/` folder and google
+- Images: Local assets within `assets/` and google
 - Video: https://youtube.com/playlist?list=PLrKudo5h_b8CKGtcPWIYtWmbTokv8QhlY&si=xGABLhoO10jVq7Bz
 https://www.youtube.com/embed/_GTMOmRrqkU
 https://www.youtube.com/embed/kQ7IR9S95zY?list=PLrKudo5h_b8CKGtcPWIYtWmbTokv8QhlY&index=13
