@@ -1,461 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <header class="site-header">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mark Jade - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+  <header class="site-header" role="banner">
     <nav id="desktop-nav">
-      <a href="#profile">
-      <div class="logo"><img src="./assets/mj-logos.png" alt="MJ logo"></div></a>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#video">Video</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+      <a href="#profile" aria-label="Go to profile section">
+        <div class="logo">
+          <img src="./assets/mj-logos.png" alt="MJ logo" />
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#video">Tutorial</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+
     <nav id="hamburger-nav">
       <div class="logo">Jade</div>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+        <button class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
-        </div>
-        <div class="menu-links">
+        </button>
+        <ul class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          <li><a href="#video" onclick="toggleMenu()">Video</a></li>
-          <li><a href="#services" onclick="toggleMenu()">Services</a></li>
-        </div>
+        </ul>
       </div>
     </nav>
-    </header>
-    <section id="profile">
-      <div class="section__text">
-        <p class="hero-kicker">Welcome to my world</p>
-        <h1 class="hero-title">Hi, I'm <span class="accent">Mark Jade</span></h1>
-        <p class="hero-subtitle">a Frontend Coder.</p>
-        <p class="hero-body">I use animation as a third dimension to make interactions feel natural and meaningful. I enjoy building delightful web experiences, thoughtfully and cleanly.</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Gurrobat_Resume.pdf', '_blank')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/mark-jade-gurrobat-6abb0035a/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Mark-droid-afk'"
-          />
-           <img
-            src="./assets/fb.png"
-            alt="My facebook profile"
-            class="icon"
-            onclick="location.href='https://www.facebook.com/jade.gurrobat/'"
-          />
-          <img
-            src="./assets/x.png"
-            alt="My x profile"
-            class="icon"
-            onclick="location.href='https://x.com/M_Jadeeen'"
-          />
-          <img
-            src="./assets/instagram.png"
-            alt="My x profile"
-            class="icon"
-            onclick="location.href='https://www.instagram.com/mjadeeeen/'"
-          />
-        </div>
-      </div>
-      <div class="section__pic-container hero-pic">
-        <img src="./assets/mj.jpg" alt="Jade profile picture" />
-      </div>
-      <div class="see-more-container">
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#about'"
-      />
-    </section>
-    <section class="parallax-section" aria-hidden="true"></section>
+  </header>
 
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
-          </div>
-        </div>
+  <section id="profile">
+    <div class="section__text">
+      <p class="hero-kicker">Welcome to my world</p>
+      <h1 class="hero-title">Hi, I'm <span class="accent">Mark Jade</span></h1>
+      <p class="hero-subtitle">a Frontend Coder.</p>
+      <p class="hero-body">
+        I’m a Front-End Developer who loves bringing ideas to life through creative and interactive web design.
+        My focus is on building visually appealing, user-friendly websites that connect design and functionality.
+      </p>
+      <div class="btn-container">
+        <a class="btn btn-color-2" href="./assets/Gurrobat_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+          Download CV
+        </a>
+        <a class="btn btn-color-1" href="#contact" aria-label="Go to contact section">Contact Info</a>
       </div>
-      <div class="see-more-container">
-        <button class="btn btn-color-2 see-more-btn" onclick="location.href='./#contact'">See more</button>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#services'"
-      />
-    </section>
-    <section class="parallax-section" aria-hidden="true"></section>
 
-    <section id="services">
-      <p class="section__text__p1">What I can do for you</p>
-      <h1 class="title">Services</h1>
-      <div class="experience-details-container">
+      <div id="socials-container">
+        <a href="https://www.linkedin.com/in/mark-jade-gurrobat-6abb0035a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon" />
+        </a>
+        <a href="https://github.com/Mark-droid-afk" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+          <img src="./assets/github.png" alt="GitHub icon" class="icon" />
+        </a>
+        <a href="https://www.facebook.com/jade.gurrobat/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+          <img src="./assets/fb.png" alt="Facebook icon" class="icon" />
+        </a>
+        <a href="https://x.com/M_Jadeeen" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) profile">
+          <img src="./assets/x.png" alt="X icon" class="icon" />
+        </a>
+        <a href="https://www.instagram.com/mjadeeeen/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+          <img src="./assets/instagram.png" alt="Instagram icon" class="icon" />
+        </a>
+      </div>
+    </div>
+
+    <div class="section__pic-container hero-pic">
+      <img src="./assets/MJ.webp" alt="Mark Jade profile picture" />
+    </div>
+
+    <div class="see-more-container">
+      <a href="#about" aria-label="Scroll to about section">
+        <img src="./assets/arrow.png" alt="Arrow down icon" class="icon arrow" />
+      </a>
+    </div>
+  </section>
+
+  <section class="parallax-section" aria-hidden="true"></section>
+
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h2 class="title">About Me</h2>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/profile.jpg" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Web Development</h2>
-            <p>Responsive websites built with clean, accessible HTML, modern CSS, and JavaScript.</p>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">UI/UX & Animation</h2>
-            <p>Delightful interfaces and micro‑interactions that feel natural and meaningful.</p>
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years <br />Frontend Development</p>
           </div>
         </div>
-      </div>
-      <div class="see-more-container">
-        <button class="btn btn-color-2 see-more-btn" onclick="location.href='./#contact'">See more</button>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section class="parallax-section" aria-hidden="true"></section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
-          </div>
-      <div class="see-more-container">
-        <button class="btn btn-color-2 see-more-btn" onclick="location.href='./#contact'">See more</button>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section class="parallax-section" aria-hidden="true"></section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Mark-droid-afk/2-2-MJadeIT-OOP'"
-              >
-              Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="see-more-container">
-        <button class="btn btn-color-2 see-more-btn" onclick="location.href='./#contact'">See more</button>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section class="parallax-section" aria-hidden="true"></section>
-
-    <!-- Inline Video Section -->
-    <section id="video">
-      <p class="section__text__p1">Watch</p>
-      <h1 class="title">Intro Video</h1>
-      <div class="video-container">
-        <div class="video-embed">
-          <iframe
-            title="Portfolio Intro"
-            src="https://www.youtube.com/embed/_GTMOmRrqkU"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-      <div class="see-more-container">
-        <button class="btn btn-color-2 see-more-btn" onclick="location.href='./#contact'">See more</button>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section class="parallax-section" aria-hidden="true"></section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
+        <div class="text-container">
           <p>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gurrobat.jade28@gmail.com" target="_blank" rel="noopener">gurrobat.jade28@gmail.com</a>
-            <button class="copy-btn" onclick="copyEmail('gurrobat.jade28@gmail.com', this)">Copy</button>
+            Hi! I’m a Front-End Developer with more than two years of experience turning ideas into beautiful,
+            functional websites. I love designing smooth user experiences and writing clean, efficient code using
+            HTML, CSS, and JavaScript. Whether it’s crafting a responsive layout or adding interactive features, I
+            always aim to make every project creative, fast, and enjoyable to use.
           </p>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/mark-jade-gurrobat-6abb0035a/">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="see-more-container">
+      <a href="#skills" aria-label="Scroll to experience section">
+        <img src="./assets/arrow.png" alt="Arrow down icon" class="icon arrow" />
+      </a>
+    </div>
+  </section>
+
+  <section class="parallax-section" aria-hidden="true"></section>
+
+  <section id="skills">
+    <p class="section__text__p1">Explore My</p>
+    <h2 class="title">Skills</h2>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h3 class="experience-sub-title">Frontend Development</h3>
+          <div class="article-container">
+            <article>
+              <img src="./assets/html.png" alt="HTML icon" class="icon" />
+              <div><h4>HTML</h4><p>Experienced</p></div>
+            </article>
+            <article>
+              <img src="./assets/css.png" alt="CSS icon" class="icon" />
+              <div><h4>CSS</h4><p>Experienced</p></div>
+            </article>
+            <article>
+              <img src="./assets/js.svg" alt="JavaScript icon" class="icon" />
+              <div><h4>JavaScript</h4><p>Basic</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="details-container">
+          <h3 class="experience-sub-title">Tools</h3>
+          <div class="article-container">
+            <article>
+              <img src="./assets/sql.png" alt="SQL icon" class="icon" />
+              <div><h4>SQL</h4><p>Basic</p></div>
+            </article>
+            <article>
+              <img src="./assets/git.png" alt="Git icon" class="icon" />
+              <div><h4>Git</h4><p>Basic</p></div>
+            </article>
+            <article>
+              <img src="./assets/vsc.svg" alt="VSC icon" class="icon" />
+              <div><h4>Visual Studio Code</h4><p>Basic</p></div>
+            </article>
+          </div>
         </div>
       </div>
-      <div class="contact-info-lower-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/phones.png"
-            alt="Phone icon"
-            class="icon contact-icon"
-          />
-          <p><a href="tel:+1234567890">+1 234 567 890</a></p>
+    </div>
+
+    <div class="text-containers">
+      <p>
+        For more than two years, I’ve been working as a Front-End Developer, building websites that are both functional
+        and visually engaging. I enjoy turning design ideas into reality using HTML, CSS, and JavaScript. I’m also
+        learning SQL and Git to expand my toolkit and improve how I work on projects.
+      </p>
+    </div>
+
+    <div class="see-more-container">
+      <a href="#projects" aria-label="Scroll to projects section">
+        <img src="./assets/arrow.png" alt="Arrow down icon" class="icon arrow" />
+      </a>
+    </div>
+  </section>
+
+  <section class="parallax-section" aria-hidden="true"></section>
+
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h2 class="title">Projects</h2>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/gith.jpg" alt="Project One thumbnail" class="project-img" />
+          </div>
+          <h3 class="experience-sub-title project-title">Project One</h3>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn" href="https://github.com/Mark-droid-afk/2-2-MJadeIT-OOP" target="_blank" rel="noopener noreferrer" aria-label="View Project One on GitHub">GitHub</a>
+          </div>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/location.png"
-            alt="Location icon"
-            class="icon contact-icon"
-          />
-          <p>Quezon City, Philippines</p>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/flutter.webp" alt="Project Two thumbnail" class="project-img" />
+          </div>
+          <h3 class="experience-sub-title project-title">Project Two</h3>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn" href="https://app.flutterflow.io/account" target="_blank" rel="noopener noreferrer" aria-label="View Project Two on Flutterflow">Flutterflow</a>
+          </div>
         </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow up icon"
-        class="icon arrow arrow-up"
-        onclick="location.href='./#profile'"
-      />
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#video">Tutorial</a></li>
-          </ul>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/website.jpg" alt="Project Three thumbnail" class="project-img" />
+          </div>
+          <h3 class="experience-sub-title project-title">Project Three</h3>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn" href="https://github.com/az-tugs/smart-inventory" target="_blank" rel="noopener noreferrer" aria-label="View Project Three on GitHub">GitHub</a>
+          </div>
         </div>
-      </nav>
-      <p>Copyright &#169; 2025 Mark Jade. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+      </div>
+    </div>
+
+    <div class="see-more-container">
+      <a href="#video" aria-label="Scroll to contact section">
+        <img src="./assets/arrow.png" alt="Arrow down icon" class="icon arrow" />
+      </a>
+    </div>
+  </section>
+
+  <section class="parallax-section" aria-hidden="true"></section>
+
+<section id="video">
+  <p class="section__text__p1">Watch</p>
+  <h1 class="title">Intro Videos</h1>
+
+  <div class="video-slider">
+    <div class="video-slide active">
+      <iframe
+        title="Intro Video 1"
+        src="https://www.youtube.com/embed/U1sEN3ELIHY?si=vbM83tdCUU_v3G5P"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="video-slide">
+      <iframe
+        title="Intro Video 2"
+        src="https://www.youtube.com/embed/kQ7IR9S95zY?list=PLrKudo5h_b8CKGtcPWIYtWmbTokv8QhlY&index=13"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="video-slide">
+      <iframe
+        title="Intro Video 3"
+        src="https://www.youtube.com/embed/_GTMOmRrqkU"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- Slider buttons -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+
+  <div class="see-more-container">
+    <div class="btn-container">
+      <a
+        class="btn btn-color-2 project-btn"
+        href="https://youtube.com/playlist?list=PLrKudo5h_b8CKGtcPWIYtWmbTokv8QhlY&si=xGABLhoO10jVq7Bz"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View Tutorial on YouTube"
+      >
+        See more...
+      </a>
+    </div>
+  </div>
+
+  <img
+    src="./assets/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#contact'"
+  />
+</section>
+
+<section class="parallax-section" aria-hidden="true"></section>
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h2 class="title">Contact Me</h2>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gurrobat.jade28@gmail.com" target="_blank" rel="noopener noreferrer">
+            gurrobat.jade28@gmail.com
+          </a>
+          <button class="copy-btn" onclick="copyEmail('gurrobat.jade28@gmail.com', this)" aria-label="Copy email address">Copy</button>
+        </p>
+      </div>
+
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/mark-jade-gurrobat-6abb0035a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      </div>
+    </div>
+
+    <div class="contact-info-lower-container">
+      <div class="contact-info-container">
+        <img src="./assets/phones.png" alt="Phone icon" class="icon contact-icon" />
+        <p><a href="tel:+1234567890">+1 234 567 890</a></p>
+      </div>
+
+      <div class="contact-info-container">
+        <img src="./assets/location.png" alt="Location icon" class="icon contact-icon" />
+        <p>Quezon City, Philippines</p>
+      </div>
+    </div>
+
+    <div class="see-more-container">
+      <a href="#profile" aria-label="Scroll to top">
+        <img src="./assets/arrow.png" alt="Arrow up icon" class="icon arrow arrow-up" />
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#video">Tutorial</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2025 Mark Jade. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
