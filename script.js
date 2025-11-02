@@ -65,4 +65,32 @@ document.querySelector(".prev").addEventListener("click", () => {
 });
 
 
+const swiper = new Swiper('.project-slider', {
+  slidesPerView: 'auto',       // Auto size based on content
+  spaceBetween: 30,            // Space between slides
+  centeredSlides: true,        // Center the active slide
+  loop: true,                  // Infinite loop
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 20,
+    },
+  },
+  on: {
+    slideChangeTransitionStart: function() {
+      // optional for additional effects
+    },
+  },
+});
 
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
